@@ -20,7 +20,7 @@
 
 url: "https://lawrenc3x.github.io"
 
-theme: null
+theme: jekyll-theme-minimal
 
 defaults:
   -
