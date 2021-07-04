@@ -17,7 +17,7 @@
 }
 
 div.grid > .content-wrap {
-  width: min(480px, 100vw - #{$nav-width} - 70px);
+  width: min(480px, 100vw - #{$nav-width} + 98px);
 //   transition: width $nav-transition;
 }
 
