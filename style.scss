@@ -1,0 +1,29 @@
+---
+---
+$sgs-red: #CC092F;
+$background: white;
+$text: black;
+$anchor: blue;
+$dark-mode-background: #2F3136;
+$dark-mode-text: #D1D0CE;
+$dark-mode-anchor: #68A6F8;
+$theme-transition: 0s;
+$nav-transition: 0.5s;
+$nav-width: 250px;
+
+@import "header";
+@import "sidebar";
+@import "switch";
+@import "content";
+@import "posts";
+
+body {
+  overflow-x: hidden;
+  transition: $theme-transition;
+  background: $background;
+}
+
+.dark-mode {
+  background: $dark-mode-background;
+  color: $dark-mode-text;
+}

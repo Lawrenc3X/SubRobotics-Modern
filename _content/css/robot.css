@@ -1,0 +1,7 @@
+#robot{
+  display: block;
+  width: min(700px, 90%);
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #35637c;
+}

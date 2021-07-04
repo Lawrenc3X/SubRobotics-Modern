@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div id="spacer">
+    {% for content_page in site.content %}
+      <a href={{content_page.url | absolute_url}} {% if content_page == page %} id="active" {% endif %}>{{content_page.title}}</a>
+    {% endfor %}
+    <label class="switch">
+      <input id="checkbox" type="checkbox" onclick="toggle('theme')">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <button class="openbtn" onclick="toggle('sidebar')">↹</button>
+</div>

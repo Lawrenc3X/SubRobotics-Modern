@@ -1,0 +1,49 @@
+.center {
+  text-align: center;
+}
+
+.content-wrap {
+  position: relative;
+  background: $background repeat-y center top;
+  outline: 3px solid $sgs-red;
+  outline-offset: -2px;
+  margin: 10px 0 10px 0;
+}
+
+.grid {
+  margin: 0 auto;
+  left: 10px;
+  top: -10px;
+}
+
+div.grid > .content-wrap {
+  width: min(480px, 100vw - #{$nav-width} - 70px);
+//   transition: width $nav-transition;
+}
+
+div.grid.closed > .content-wrap {
+  width: 480px;
+}
+
+.content-wrap h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 10px 0px 0px 10px;
+}
+
+h2.no-info {
+  padding: 10px;
+}
+
+p.post-meta > a:visited {
+  color: $anchor;
+}
+
+.content-wrap.dark-mode  a, .content-wrap.dark-mode a:visited {
+  color: $dark-mode-anchor;
+}
+
+footer {
+  transition: $theme-transition;
+  padding: 5px 0px;
+}

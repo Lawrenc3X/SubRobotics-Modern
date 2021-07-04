@@ -1,0 +1,65 @@
+$leftover: 50px;
+
+#active {
+  outline: 2px solid white;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  width: $nav-width;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $sgs-red;
+  overflow-x: hidden;
+  transition: $nav-transition;
+}
+
+.sidebar.closed {
+  width: $leftover;
+}
+
+#spacer {
+  margin-left: $leftover;
+  overflow: hidden;
+}
+
+.sidebar a {
+  text-align: center;
+  white-space:nowrap;
+  padding: 8px;
+  margin: 10px;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  outline: 2px dashed white;
+}
+
+#main {
+  margin-left: $nav-width;
+  transition: margin-left $nav-transition;
+  padding: 0 16px 0 16px;
+}
+
+#main.closed {
+  margin-left: $leftover;
+}
+
+.openbtn{
+  font-family: Helvetica;
+  font-size: 32px;
+  position: absolute;
+  border: none;
+  top: 0;
+  width: $leftover;
+  height: 100%;
+  background: $sgs-red;
+  color: white;
+}

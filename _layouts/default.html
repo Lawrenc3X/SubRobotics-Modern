@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link type="text/css" rel="stylesheet" href={{"style.css" | absolute_url}}>
+    {% if page.style %}
+    <style>
+      {% include_relative css/{{page.style}}.css %}
+    </style>
+    {% endif %}
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script defer src={{"script.js" | absolute_url}}></script>
+  </head>
+  <body>
+    {% include sidebar.html %}
+    <div id="main">
+      {% include header.html %}
+      {{ content }}
+      <footer>
+        <small>&copy; Copyright 2021, SGSRobotics. Photos by Ben Kang.</small>
+      </footer>
+    </div>
+  </body>
+</html>

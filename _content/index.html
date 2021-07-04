@@ -1,0 +1,199 @@
+---
+title: Home
+permalink: /
+date: 0000-01-01
+---
+<div class="grid" data-masonry='{ "itemSelector": ".content-wrap", "columnWidth": 500, "fitWidth": true, "transitionDuration": 1000}'>
+  <div class="content-wrap">
+    <h2>Big Push</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    School is out! All of the stuff that gets in the way of robotics: classes,
+    homework tests, manditory after school sports, report cards and graduation
+    ceremonies are done! <br />
+    <br />
+    Summer 2017
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Directed Studies</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    One of the technology courses had a curve thrown at it. In September a 
+    student's year's project was build and develop a semi-autonomous aerial drone.
+    Then there was an announcement from the Transport Canada, the federal
+    regulation body. Drone useage rules would be stricter, and linked to the
+    criminal code to enable police departments to enforce them. These new rules
+    made legal private drone use inside Vancouver city limits virtually impossible.
+    Until the school completes Transport Canada's requirements and recieves
+    academic exemption status, drones will remain grounded.<br />
+    The student involved with this aerial drone would switch to working on an AUV.
+    This one individual would become an inverse tasmanian devil leaving a trail of
+    creation in his whirling path. Items to his credit were the 3D design and
+    physical creation of the current tray system, the kill and arm switch controls,
+    thruster junction box / gimbal arm connector and an independent pitch zeroing
+    system (mechanics, electronics and programming)!<br />
+    <br />
+    Spring 2017
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Schizophrenia</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    Spring time, warming weather, summer vacation looms and student activity
+    bedlam. Organizing meaningful meetings was an exercise in futility due to the
+    number of students coming and going on school tours or extracurricular
+    activities. Somewhere in there, the one that was supposed to be the webmaster
+    was disappeared into a model UN group and the programmers were comitted to a
+    school tour to Waterloo University for half a month. We're still waiting for
+    the webmaster to resurface somewhere.<br />
+    <br />
+    Spring 2017
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Get wet already...</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    Lots of time expended chasing phantoms with the sensors. Time to splash. With
+    the prototype tray system and basic electronics taped to it, pool time was
+    booked to check / calibrate the depth sensor. The test would commence without
+    the propulsion system attached. It took over 28 pounds of scuba weight belt to
+    convince the electronics hull with Raspberry Pi, OSD-5000 and MEAS transducer
+    sink. Gingerly the hull was submerged at increasing depths and visually checked
+    for leaks at each plateau. The collected data looked good from the sensor.
+    Finally something straight forward!<br />
+    <br />
+    Winter 2017
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Sensor Rework II </h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    The real OceanServer OS5000-USD Compass/Depth Option sensor was tested on the
+    faculty advisor's ancient decade old netbook running the the manufacturer's
+    demonstration software. The data stream came through five by five.<br />
+    The sensor was handed off to the team, and the report, &quot;this thing is
+    still sending wonky depth data!&quot;<br />
+    Suprise, fustation... cause?!? What changed? It worked on a Windows XP netbook,
+    it partially worked on a Linux Raspberry Pi 3. The programmmers fingered Linux
+    drivers and moved to find and install the latest FTDI Linux drivers. Done,
+    retest... same result. &quot;Were these drivers the right ones? Perhaps the
+    second latest drivers?&quot;, asked the programmers.<br />
+    Install those ones. Done, test... SAME result. Revert back to the original
+    drivers... installation error... unstable operation... oh what a mess. ...
+    debug the OS or just reinstall? The law of diminishing returns dictates:
+    reinstall.<br />
+    In the mean time the question,&quot;Is it a Pi thing?&quot;, arose. <br />
+    New test try running a tty terminal on a MacBook Air. Result: same.
+    Stumped.<br />
+    Call Tech Support again.  Result: &quot;We're sorry we only support MS Windows
+    environments.&quot; Frown. Walk away for a couple of days.<br />
+    Thinking about something different, &quot;how long can our batteries run a
+    Raspberry Pi3?&quot;, was the segueway to the solution of sensor conundrum.
+    The Pi3 has a current consumptions close to 2A. The battery port is rated at
+    2A... very tight current tolerances. But wait the sensor is also powered by the
+    Pi. Check out the USB ports on the faculty advisor's ancient netbook. It
+    supplied 5.2V. Compare to the Pi and MacBook Air: 4.8V. Could the 0.4V drop be
+    screwing up the 24bit transducer AD converter on the the sensor module?
+    Experiment attach a powered USB hub to the Pi, attach the OS-5000USD to the
+    hub and run the code. Wow every thing read perfectly: compass bearing and
+    depth. Question answered. Problem solution attainable.<br />
+    Time chewed up: five weeks.<br />
+    <br />
+    Winter 2017
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Sensor Rework</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    Navigation for the AUV revolves heavily upon the the OceanServer OS-5000USD 3D
+    compass/Depth module installed in the AUV. This year's programming team wanted
+    to know why the PID used in RoboSub 2016 was only 80% ... in their opinion. The
+    compass module was collected from the parts cache for testing. Directional
+    information from the sensor was immediately available, but there were some
+    peculiarities in reading depth information. The depth information did not seem
+    to update. Backtrack to the sensor to the manufacturer demonstration software.
+    Same result... scratch your head... try it on a different computer... same
+    result... scratch your head somemore... ask a fresh set of eyes to check...
+    same result... what the h377?! Contact the manufacturer's technical support.
+    Email pictures to technical support. &quot;That's not a OS5000USD Compass/Depth
+    sensor, its an OSD5000USD Compass (only),&quot; was tech support's response.
+    Wow.<br />
+    The chain of events. OSD5000USD Compass/Depth sensor removed from 2016 AUV,
+    test fit onto new tray, put in old box (mislabled), and collected first
+    OSD5000USD visible for this test: a comedy of errors choreographed by many with
+    a cost of three weeks.<br />
+    <br />
+    Fall 2016
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Tray</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    During the 2016 RoboSub competition, one of the largest sources of fustration
+    was the inability to pull cylindrical component sections out of the hull to
+    perform servicing and adjustment. Issues with the way the hull was constructed
+    prevented smooth tranport of the component sections. The change for correct
+    this was to build a tray-drawer system to hold electronics, batteries and
+    sensors. Over the next few weeks a prototype built from scrap wood and
+    furnature hardware. The electonics were removed from the AUV and a trial fit on 
+    the new trays was made.<br />
+    <br />
+    Fall 2016
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Forward</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    Discussions were held with returning and new robotics team members covering
+    what worked, what skidded by and what failed in the AUV. That conversation was
+    followed with the question, &quot;What now and what is possible with the
+    resources at hand?!&quot;<br />
+    The main takeaways were: the internal electronics tray system had to be redone,
+    software reliability on the sensors and control circuits had to be improved and
+    essentially make do with the minimal number of purchases.<br />
+    <br />
+    Fall 2016
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>The Fall</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    Expenses for the AUV during San Diego tour were settled at the start of the
+    school year, because the fiscal year end happened April 30, 2016. Then came a
+    &quot;funny&quot; discovery courtesy of the school administration. The new
+    budget featured a 58% cut to the robotics program. Merde.<br />
+    <br />
+    Fall 2016
+    </p>
+  </div>
+
+  <div class="content-wrap">
+    <h2>Reboot 2017</h2>
+    <p class="post-info">Posted by K </p>
+    <p class="post-meta">
+    So the return home from RoboSub 2016 was nice. The return flight was smooth.
+    The parents were happy the chaperones hadn't lost any students. The mid-August
+    land recovery of the AUV in its road case from the Washington State address was
+    uneventful. The road case would sit waiting until the start of the 2016-2017
+    school year.<br />
+    <br />
+    Summer 2016
+    </p>
+  </div>
+</div>
