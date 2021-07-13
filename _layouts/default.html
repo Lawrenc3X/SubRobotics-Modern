@@ -8,7 +8,7 @@
       {% include_relative css/{{page.style}}.css %}
     </style>
     {% endif %}
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/ico">
+    <link href={{"/images/favicon.ico" | absolute_url}} rel="shortcut icon" type="image/ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script defer src={{"script.js" | absolute_url}}></script>
