@@ -1,6 +1,6 @@
 #header {
   position: relative;
-  width: min(90%, 900px);
+  width: 90%;
   margin: 0 auto;
   padding: 0;
 }
@@ -43,7 +43,7 @@ p#slogan {
 .fadein {
   position: relative;
   top: 5px;
-  width: min(100%, 900px);
+  width: 100%;
   height: 300px;
   overflow: hidden;
 }
@@ -53,6 +53,6 @@ p#slogan {
   left: 0;
   top: 0;
   padding: 0;
-  width: 1024px;
-  height: 683px;
+  width: max(auto, 100%);
+  height: 1200px;
 }
