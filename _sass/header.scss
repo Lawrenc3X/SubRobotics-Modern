@@ -14,6 +14,7 @@ h1#logo-text a {
   text-decoration: none;
   top: 5px; left: 15px;
   transition: $nav-transition;
+  -webkit-text-stroke: 2px #d1d0ce;
 }
 
 h1#logo-text span {
